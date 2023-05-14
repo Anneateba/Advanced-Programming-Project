@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>Sign In Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <!--this line defines a meta viewport tag, which is used to control the layout and the scaling and mobile devices. It ensures 
+    that the webpage is displayed properly and the content is displayed appropriately for the device's screen size-->
+
+    <link rel="stylesheet" href="signInDesign.css">
+    <!--this line connect the html and the css page-->
+    
+</head>
+
+<body>
+    
+    <p class="pizzeria_name1">Best in town</p><br>
+    <p class="pizzeria_name2">PIZZA HOUSE</p><br><br>
+    <p class="signin">Sign In</p><br><br>
+    <center> <!--to align the next section to the center of the page-->
+        <!--The lower code section allows us to create a box or container that contains the casses and attributes that allowas us 
+        to create a space where the user can enter his email and password. It also create a login button-->
+        <div class="container1">
+            <input class="box" type="text" placeholder="Email Adress" id="email"><br>
+                   <input class="box" type="password" placeholder="Password" id="password"><br>
+           <!-- <button class="loginbtn" href="homepageSimulation.html" onclick="auth()">Login</button> -->
+           <input type="submit" value="Login" class="loginbtn" onclick="auth()">
+        </div>
+        <!--This second container allows us to create a check box allowing the user to chose if they want their informations remembered 
+        or not. It also allows us to create a link to the sign up page as well as a password recovery page  -->
+        <div class="container2">
+            <input class="check" type="checkbox">
+            <label for="check" class="p1">Remember Me</label>
+            <a href="#" class="p2"><p>Forgot Password?</p></a>
+            <p>Not created account? | <a href="signUp.html" class="p3">Create Account</a></p><hr class="bar">
+        </div>
+    </center> 
+<script>
+    function auth(){
+        var email= document.getElementById ("email").value;
+        var password= document.getElementById ("password").value;
+        if(email== "user@gmail.com" && password== "user123"){
+            window.location.assign("homepageSimulation.html");
+            alert("Login successfully");
+        }
+        else{
+            alert ("invalid Information");
+            return;
+        }
+    }
+</script> 
+</body>
+
+</html>
