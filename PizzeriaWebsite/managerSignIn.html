@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>Admin Sign In Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <!--this line defines a meta viewport tag, which is used to control the layout and the scaling and mobile devices. It ensures 
+    that the webpage is displayed properly and the content is displayed appropriately for the device's screen size-->
+
+    <link rel="stylesheet" href="managerSignIn.css">
+    <!--this line connect the html and the css page-->
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    
+    <p class="signin">Sign In</p><br><br>
+    <center> <!--to align the next section to the center of the page-->
+        <!--The lower code section allows us to create a box or container that contains the casses and attributes that allowas us 
+        to create a space where the user can enter his email and password. It also create a login button-->
+        <div class="container1">
+            <input class="box" type="text" placeholder="Admin ID" id="adminId"><br>
+                   <input class="box" type="password" placeholder="Password" id="password"><br>
+                   <button class="loginbtn" href="homepageSimulation.html" onclick="auth()">Login</button> 
+             
+        </div>
+        <!--This second container allows us to create a check box allowing the user to chose if they want their informations remembered 
+        or not. It also allows us to create a link to the sign up page as well as a password recovery page  -->
+        <div class="container2">
+            <input class="check" type="checkbox">
+            <label for="check" class="p1">Remember Me</label>
+            <a href="#" class="p2"><p>Forgot Password?</p></a>
+        </div>
+    </center> 
+<script>
+    function auth(){
+        var adminId= document.getElementById ("adminId").value;
+        var password= document.getElementById ("password").value;
+        if(adminId== "admin1234" && password== "admin123"){
+            window.location.assign("#");
+            alert("Login successfully");
+        }
+        else{
+            alert ("invalid Information");
+            return;
+        }
+    }
+</script> 
+
+</html>
